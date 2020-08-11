@@ -3,7 +3,7 @@ set $super Mod4
 set $alt Mod1
 
 # set font
-font pango: MesloLGS NF 8
+font pango: Noto Sans 10
 
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
@@ -13,8 +13,9 @@ floating_modifier $super
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 exec --no-startup-id wal -R
-exec --no-startup-id i3-msg 'workspace 8; exec i3-sensible-terminal -e ytop'
 exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP1
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id i3-msg 'workspace 8; exec i3-sensible-terminal -e ytop'
 
 # start a terminal
 bindsym $super+Return exec i3-sensible-terminal
@@ -110,7 +111,16 @@ bindsym $super+o move workspace to output left
 bindsym $super+Shift+r restart
 
 # exit i3
-bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Are you sure you want to logout?' -b 'Yes' 'i3-msg exit'"
+# bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Are you sure you want to logout?' -b 'Yes' 'i3-msg exit'"
+mode "exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel" {
+  bindsym l exec i3-msg exit
+  bindsym r exec reboot
+  bindsym s exec poweroff
+  bindsym Escape mode "default"
+  bindsym Return mode "default"
+}
+
+bindsym $super+Shift+q mode "exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -123,20 +133,20 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 # panel
-bar {
-        colors {
-        background #2f343f
-        statusline #2f343f
-        separator #4b5262
-
-        # colour of border, background, and text
-        focused_workspace       #2f343f #bf616a #d8dee8
-        active_workspace        #2f343f #2f343f #d8dee8
-        inactive_workspace      #2f343f #2f343f #d8dee8
-        urgent_workspacei       #2f343f #ebcb8b #2f343f
-    }
-        status_command i3status
-}
+# bar {
+#         colors {
+#         background #2f343f
+#         statusline #2f343f
+#         separator #4b5262
+# 
+#         # colour of border, background, and text
+#         focused_workspace       #2f343f #bf616a #d8dee8
+#         active_workspace        #2f343f #2f343f #d8dee8
+#         inactive_workspace      #2f343f #2f343f #d8dee8
+#         urgent_workspacei       #2f343f #ebcb8b #2f343f
+#     }
+#         status_command i3status
+# }
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 3
