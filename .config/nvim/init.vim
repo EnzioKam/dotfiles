@@ -8,11 +8,10 @@ Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
-Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
-colorscheme wal
+colorscheme nord
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
