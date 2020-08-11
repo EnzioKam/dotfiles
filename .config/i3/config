@@ -15,6 +15,7 @@ exec --no-startup-id compton -b
 exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id i3-msg 'workspace 8; exec i3-sensible-terminal -e ytop'
+exec --no-startup-id betterlockscreen -w dim
 
 # start a terminal
 bindsym $super+Return exec i3-sensible-terminal

@@ -134,6 +134,6 @@ rofi.modi: run,drun,window
 ! ------------------------------------------------------------------------------
 URxvt.transparent: true
 ! 0 is completely black, 100 completely transparent and 200 completely white. 
-URxvt.shading:30
+URxvt.shading:50
 URxvt.foreground: #eeeeee
 
