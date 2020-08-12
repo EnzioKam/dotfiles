@@ -2,53 +2,55 @@
 ! Colour Configuration
 ! ------------------------------------------------------------------------------
 
-! special
-*.foreground:   #d8dee8
-*.background:   #2f343f
-*.cursorColor:  #d08770
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-! black
-*.color0  : #4b5262
-*.color8  : #434a5a
+*.foreground:   nord4
+*.background:   nord0
+! *.cursorColor:  nord4
+*.cursorColor:  nord12
+*fading: 35
+*fadeColor: nord3
 
-! red
-*.color1  : #bf616a
-*.color9  : #b3555e
-
-! green
-*.color2  : #a3be8c
-*.color10 : #93ae7c
-
-! yellow
-*.color3  : #ebcb8b
-*.color11 : #dbbb7b
-
-! blue
-*.color4  : #81a1c1
-*.color12 : #7191b1
-
-! magenta
-*.color5  : #b48ead
-*.color13 : #a6809f
-
-! cyan
-*.color6  : #89d0bA
-*.color14 : #7dbba8
-
-! white
-*.color7  : #e5e9f0
-*.color15 : #d1d5dc
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
 
 ! ------------------------------------------------------------------------------
 ! Font configuration
 ! ------------------------------------------------------------------------------
 
-! URxvt*font:		xft:M+ 1mn:regular:size=8
-! URxvt*boldFont:		xft:M+ 1mn:bold:size=8
-! URxvt*italicFont:	xft:M+ 1mn:italic:size=8
-! URxvt*boldItalicFont:	xft:M+ 1mn:bold italic:size=8
-
-URxvt*font: xft:MesloLGS NF:size=11
+URxvt*font:             xft:MesloLGS NF:size=11
+URxvt*boldFont:		    xft:MesloLGS NF:bold:size=11
+URxvt*italicFont:	    xft:MesloLGS NF:italic:size=11
+URxvt*boldItalicFont:	xft:MesloLGS NF:bold italic:size=11
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration
