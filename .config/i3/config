@@ -161,8 +161,8 @@ for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucon
 for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
-smart_gaps on
-gaps inner 10
+smart_gaps inverse_outer
+gaps inner 20
 
 # colour of border, background, text, indicator, and child_border
 # client.focused              #bf616a #2f343f #2f343f #bf616a #2f343f
