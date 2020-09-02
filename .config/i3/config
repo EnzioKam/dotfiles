@@ -16,6 +16,7 @@ exec --no-startup-id xrandr --output HDMI-1-1 --auto --left-of eDP1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id i3-msg 'workspace 8; exec i3-sensible-terminal -e ytop'
 exec --no-startup-id betterlockscreen -w
+exec --no-startup-id $HOME/scripts/i3-alt-layout/alternating_layouts.py
 
 # start a terminal
 bindsym $super+Return exec i3-sensible-terminal
@@ -48,7 +49,7 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 
 # kill focused window
-bindsym $super+c kill
+bindsym $super+q kill
 bindsym $alt+F4 kill
 
 # change focus

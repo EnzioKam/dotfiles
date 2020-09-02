@@ -79,6 +79,7 @@ URxvt*urgentOnBell:		true
 
 ! appearance
 URxvt*depth:			32
+URxvt*background:       [50]#0E192E
 URxvt*scrollBar:		false
 URxvt*scrollBar_right:	false
 URxvt*internalBorder:	24
@@ -134,7 +135,7 @@ rofi.modi: run,drun,window
 ! ------------------------------------------------------------------------------
 ! Transparency options
 ! ------------------------------------------------------------------------------
-! URxvt.transparent: true
+URxvt.transparent: false
 ! 0 is completely black, 100 completely transparent and 200 completely white. 
 ! URxvt.shading:90
 ! URxvt.foreground: #eeeeee
