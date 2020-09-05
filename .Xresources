@@ -21,7 +21,6 @@
 
 *.foreground:   nord4
 *.background:   nord0
-! *.cursorColor:  nord4
 *.cursorColor:  nord12
 *fading: 35
 *fadeColor: nord3
@@ -136,7 +135,4 @@ dmenu.foreground:           nord4
 ! Transparency options
 ! ------------------------------------------------------------------------------
 URxvt.transparent: false
-! 0 is completely black, 100 completely transparent and 200 completely white. 
-! URxvt.shading:90
-! URxvt.foreground: #eeeeee
 
