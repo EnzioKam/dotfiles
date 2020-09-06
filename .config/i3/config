@@ -31,12 +31,14 @@ bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec nemo
 bindsym $super+Shift+c exec code
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+## Volume control
+set $volumepath i3-volume
+set $volumestep 5
+bindsym XF86AudioRaiseVolume exec $volumepath -np -i $volumestep
+bindsym XF86AudioLowerVolume exec $volumepath -np -d $volumestep
+bindsym XF86AudioMute        exec $volumepath -mn
 
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
