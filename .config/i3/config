@@ -15,10 +15,14 @@ exec_always $HOME/scripts/i3-alt-layout/alternating_layouts.py
 
 # Keybindings
 bindsym $super+Shift+r restart
+bindsym $super+Shift+e reload
 bindsym $super+Return exec i3-sensible-terminal
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'MesloLGS NF:size=10'"
 bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'MesloLGS NF 10'
-bindsym Print exec scrot 'Pictures/screenshots/ss_%d%b%y_%H.%M.png' -e 'gpicview $f'
+bindsym $alt+Tab exec rofi -lines 12 -padding 18 -width 60 -location 0 -show window -sidebar-mode -columns 3 -font 'MesloLGS NF 10'
+# bindsym Print exec scrot 'Pictures/screenshots/ss_%d%b%y_%H.%M.png' -e 'gpicview $f'
+bindsym Print exec $HOME/bin/scrotselect
+bindsym $super+Print exec $HOME/bin/scrotselect -s
 bindsym $super+l exec betterlockscreen -l
 bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec nemo
