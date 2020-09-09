@@ -4,16 +4,6 @@ floating_modifier $super
 
 font pango: JetBrains Mono 10
 
-# Autostart
-exec --no-startup-id xsettingsd &
-exec --no-startup-id picom --daemon --experimental-backends
-exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP1
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id betterlockscreen -w
-exec --no-startup-id nm-applet
-exec --no-startup-id load_layout
-exec_always $HOME/scripts/i3-alt-layout/alternating_layouts.py
-
 # Keybindings
 bindsym $super+Shift+r restart
 bindsym $super+Shift+e reload
@@ -139,4 +129,14 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
+
+# Autostart
+exec --no-startup-id xsettingsd &
+exec --no-startup-id picom --daemon --experimental-backends
+exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP1
+exec --no-startup-id betterlockscreen -w
+exec --no-startup-id nm-applet
+exec --no-startup-id $HOME/bin/load_layout
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always $HOME/scripts/i3-alt-layout/alternating_layouts.py
 
