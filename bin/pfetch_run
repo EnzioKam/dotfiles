@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell palette"
+
 while :
 do
     pfetch;

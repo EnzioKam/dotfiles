@@ -1,4 +1,5 @@
 #!/bin/bash
+# Taken from https://wiki.archlinux.org/index.php/i3
 
 i3-msg "workspace 8; append_layout ~/.config/i3/workspace-8.json"
 

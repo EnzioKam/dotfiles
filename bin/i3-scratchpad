@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+# i3-scratchpad
+# Taken from https://github.com/EllaTheCat/dopamine/
+
+#  Constants copied from i3-config must maintain consistency.
+
+export cmon="eDP1"
+export rmon="HDMI-1-1"
+
+#
+# Toggle the scratchpad terminal between show and hide.
+#
+toggle ()
+{
+    # Only one key binding is required, the first keypress performs
+    # initialisation and hides the terminal again.
+    if [ "_$(xdotool search --classname "Scratchpad" | head -1)"  = "_" ]; then
+        urxvt -T Scratchpad &
+	# Allow the terminal enough time to initialise.
+	# This value needs to be "just right", ymmv.
+        sleep 0.3
+        # Set the instance to identify the scratchpad.
+        xdotool getwindowfocus set_window --classname "Scratchpad"
+        i3-msg "[instance=\"Scratchpad\"] resize set 80 ppt 80 ppt"
+        i3-msg "[instance=\"Scratchpad\"] move position center"
+        i3-msg "[instance=\"Scratchpad\"] move scratchpad"
+    else
+        i3-msg "focus output ${cmon}"
+        i3-msg "[instance=\"Scratchpad\"] scratchpad show"
+    fi
+}
+
+toggle;
+

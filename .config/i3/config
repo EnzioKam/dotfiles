@@ -53,6 +53,10 @@ bindsym $super+s layout toggle split
 bindsym $super+space floating toggle
 bindsym $super+Shift+space focus mode_toggle
 
+# Scratchpad control
+bindsym $alt+Control+Up exec $HOME/bin/i3-scratchpad
+bindsym $alt+Control+Down exec $HOME/bin/i3-scratchpad
+
 # Workspace control
 bindsym $alt+Control+Right workspace next
 bindsym $alt+Control+Left workspace prev
