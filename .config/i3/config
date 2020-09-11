@@ -105,7 +105,7 @@ bindsym $super+Shift+q mode "exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 for_window [class=".*"] border pixel 0
 assign [title=Firefox] 2
 assign [class=Nemo|File-roller|VSCodium] 3
-assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
+assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Telegram] 4
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
 assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
 for_window [class=Gpicview|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
