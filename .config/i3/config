@@ -15,7 +15,7 @@ bindsym Print exec $HOME/bin/scrotselect
 bindsym $super+Print exec $HOME/bin/scrotselect -s
 bindsym $super+l exec betterlockscreen -l
 bindsym $super+Shift+w exec firefox
-bindsym $super+Shift+f exec nemo
+bindsym $super+Shift+f exec pcmanfm
 bindsym $super+Shift+c exec code
 
 ## Volume control
@@ -26,14 +26,8 @@ bindsym XF86AudioLowerVolume exec $volumepath -np -d $volumestep
 bindsym XF86AudioMute        exec $volumepath -mn
 
 # Screen brightness control
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
-
-# Music control
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioStop exec mpc stop
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Window control
 bindsym $super+q kill
@@ -104,14 +98,13 @@ bindsym $super+Shift+q mode "exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 # Window rules (find class with xprop)
 for_window [class=".*"] border pixel 0
 assign [title=Firefox] 2
-assign [class=Nemo|File-roller|VSCodium] 3
-assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Telegram] 4
-assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
-assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
-for_window [class=Gpicview|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
-for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
-for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
-for_window [title=Zoom|MellowPlayer] move to workspace 5
+assign [class=Pcmanfm|File-roller|VSCodium] 3
+assign [class=qpdfview] 4
+assign [class=Telegram] 5
+for_window [title=Zoom|MellowPlayer] move to workspace 6
+assign [class=Lxappearance|Pavucontrol] 7
+for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol] floating enable
+for_window [class=URxvt|Firefox|File-roller|Lxappearance|Pavucontrol] focus
 
 # Gap options
 smart_gaps inverse_outer
