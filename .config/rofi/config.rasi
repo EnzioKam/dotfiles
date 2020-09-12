@@ -1,0 +1,14 @@
+configuration {
+	modi: "run,drun,window";
+    width: 60;
+    lines: 12;
+    columns: 3;
+    font: "MesloLGS NF 10";
+    location: 0;
+    padding: 18;
+    sidebar-mode: true;
+	color-normal: "#2E3440, #D8DEE9, #2E3440, #2E3440, #BF616A";
+	color-urgent: "#2E3440, #EBCB8B, #2E3440, #2E3440, #EBCB8B";
+	color-active: "#2E3440, #B48EAD, #2E3440, #2E3440, #88C0D0";
+	color-window: "#2E3440, #2E3440, #2E3440";
+}
