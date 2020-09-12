@@ -28,6 +28,7 @@ toggle ()
     else
         i3-msg "focus output ${cmon}"
         i3-msg "[class=Spotify] scratchpad show"
+        i3-msg "focus tiling"
     fi
 }
 
