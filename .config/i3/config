@@ -101,9 +101,10 @@ assign [title=Firefox] 2
 assign [class=Pcmanfm|File-roller|VSCodium] 3
 assign [class=qpdfview] 4
 assign [class=Telegram] 5
-for_window [title=Zoom|MellowPlayer] move to workspace 6
+assign [Class=MellowPlayer] 6
 assign [class=Lxappearance|Pavucontrol] 7
-for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol] floating enable
+for_window [title=Zoom] move to workspace 7
+for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|Zoom] floating enable
 for_window [class=URxvt|Firefox|File-roller|Lxappearance|Pavucontrol] focus
 
 # Gap options
