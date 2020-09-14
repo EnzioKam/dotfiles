@@ -3,11 +3,11 @@
 res=$(playerctl --player=spotify status 2>&1 1>/dev/null)
 
 if [[ $? == 1 ]]; then
-    echo
+    echo "Inactive"
 elif [ "$(playerctl --player=spotify status)" = "Paused"  ]; then
-    playerctl --player=spotify metadata --format "{{ title }} - {{ artist }}"
+    echo "Paused"
 elif [ "$(playerctl --player=spotify status)" = "Playing"  ]; then
-    playerctl --player=spotify metadata --format "{{ title }} - {{ artist }}"
+    echo "Playing"
 else
     echo "No music is playing"
 fi

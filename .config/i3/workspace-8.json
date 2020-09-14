@@ -41,7 +41,7 @@
     "layout": "splith",
     "percent": null,
     "rect": {
-       "height": 988,
+       "height": 900,
        "width": 1028,
        "x": 41,
        "y": 51
@@ -81,7 +81,7 @@
        "height": 348,
        "width": 518,
        "x": 1270,
-       "y": 648
+       "y": 600
     },
     "type": "floating_con",
     "nodes": [
