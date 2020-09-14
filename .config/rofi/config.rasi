@@ -3,12 +3,12 @@ configuration {
     width: 60;
     lines: 12;
     columns: 3;
-    font: "MesloLGS NF 10";
+    font: "MesloLGS NF 11";
     location: 0;
     padding: 18;
     sidebar-mode: true;
-	color-normal: "#2E3440, #D8DEE9, #2E3440, #2E3440, #BF616A";
-	color-urgent: "#2E3440, #EBCB8B, #2E3440, #2E3440, #EBCB8B";
-	color-active: "#2E3440, #B48EAD, #2E3440, #2E3440, #88C0D0";
-	color-window: "#2E3440, #2E3440, #2E3440";
+	color-normal: "#005E818C, #D8DEE9, #005E818C, #005E818C, #BF616A";
+	color-urgent: "#505E818C, #EBCB8B, #505E818C, #505E818C, #EBCB8B";
+	color-active: "#505E818C, #D08770, #505E818C, #505E818C, #D08770";
+	color-window: "#505E818C, #505E818C, #505E818C";
 }
