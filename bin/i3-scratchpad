@@ -21,8 +21,8 @@ toggle ()
 	# This value needs to be "just right", ymmv.
         sleep 1
         xdotool getwindowfocus set_window --classname "Spotify"
-        i3-msg "[class=Spotify] resize set 1250 120"
-        i3-msg "[class=Spotify] move absolute position center"
+        i3-msg "[class=Spotify] resize set 1250 92"
+        i3-msg "[class=Spotify] move position center"
         i3-msg "[class=Spotify] move down 475 px"
         i3-msg "[class=Spotify] move scratchpad"
     else

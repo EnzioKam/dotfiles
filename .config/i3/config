@@ -17,7 +17,7 @@ bindsym $super+l exec betterlockscreen -l
 bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec pcmanfm
 bindsym $super+Shift+c exec code
-bindsym $super+m [class=Spotify] floating enable, resize set 1250 120, move absolute position center, move down 475 px, move scratchpad
+bindsym $super+m [class=Spotify] floating enable, resize set 1250 92, move position center, move down 475 px, move scratchpad
 
 # Volume control
 set $volumepath $HOME/scripts/i3-volume/volume
@@ -115,7 +115,7 @@ assign [class=Lxappearance|Pavucontrol] 7
 for_window [title=Zoom] move to workspace 7
 for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|Spotify|Zoom] floating enable
 for_window [class=URxvt|Firefox|File-roller|Lxappearance|Pavucontrol] focus
-for_window [class=Spotify] resize set 1250 120, move absolute position center, move down 475 px
+for_window [class=Spotify] resize set 1250 92, move position center, move down 475 px
 
 # Gap options
 smart_gaps inverse_outer
