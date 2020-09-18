@@ -108,7 +108,7 @@ bindsym $super+Shift+q mode "Exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 for_window [class=".*"] border pixel 0
 assign [class=firefox] 2
 assign [class=Pcmanfm|File-roller|VSCodium] 3
-assign [class=qpdfview|Xournalpp] 4
+assign [class=qpdfview|Xournalpp|DesktopEditors] 4
 assign [class=Telegram|discord] 5
 assign [Class=MellowPlayer] 6
 assign [class=Lxappearance|Pavucontrol] 7
