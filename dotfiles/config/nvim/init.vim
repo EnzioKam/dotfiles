@@ -1,19 +1,23 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
-Plug 'JuliaEditorSupport/julia-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
+Plug 'ryanoasis/vim-devicons'
+Plug 'junegunn/fzf.vim'
+Plug 'lifepillar/vim-mucomplete'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-colorscheme nord
+let g:dracula_colorterm = 0
+colorscheme dracula
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'dracula',
       \ }
 let g:rainbow_active = 1
 
@@ -57,4 +61,9 @@ tnoremap <C-h> <C-\><C-N><C-w>h
 tnoremap <C-j> <C-\><C-N><C-w>j
 tnoremap <C-k> <C-\><C-N><C-w>k
 tnoremap <C-l> <C-\><C-N><C-w>l
+
+set completeopt+=menuone,noselect
+set shortmess+=c
+set belloff+=ctrlg
+let g:mucomplete#enable_auto_at_startup = 1
 

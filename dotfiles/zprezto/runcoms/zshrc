@@ -24,6 +24,8 @@ fi
 
 # PATH variables
 export PATH=$PATH:/home/enzio/bin/
+export PF_INFO='ascii title os host kernel uptime pkgs memory wm shell'
+export FZF_DEFAULT_COMMAND='fd -H'
 
 # Alias for Editor
 alias vim='nvim'
