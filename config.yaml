@@ -1,0 +1,100 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_zlogin:
+    src: zprezto/runcoms/zlogin
+    dst: ~/.zprezto/runcoms/zlogin
+  f_zlogout:
+    src: zprezto/runcoms/zlogout
+    dst: ~/.zprezto/runcoms/zlogout
+  f_zpreztorc:
+    src: zprezto/runcoms/zpreztorc
+    dst: ~/.zprezto/runcoms/zpreztorc
+  f_zprofile:
+    src: zprezto/runcoms/zprofile
+    dst: ~/.zprezto/runcoms/zprofile
+  f_zshenv:
+    src: zprezto/runcoms/zshenv
+    dst: ~/.zprezto/runcoms/zshenv
+  f_zshrc:
+    src: zprezto/runcoms/zshrc
+    dst: ~/.zprezto/runcoms/zshrc
+  f_xresources:
+    src: Xresources
+    dst: ~/.Xresources
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_dmrc:
+    src: dmrc
+    dst: ~/.dmrc
+  f_wallpaper.jpg:
+    src: wallpaper.jpg
+    dst: ~/.wallpaper.jpg
+  f_xsettingsd:
+    src: xsettingsd
+    dst: ~/.xsettingsd
+  d_bin:
+    src: bin
+    dst: ~/bin
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
+  d_gtk-3.0:
+    src: config/gtk-3.0
+    dst: ~/.config/gtk-3.0
+  d_i3:
+    src: config/i3
+    dst: ~/.config/i3
+  d_i3status:
+    src: config/i3status
+    dst: ~/.config/i3status
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+  d_pcmanfm:
+    src: config/pcmanfm
+    dst: ~/.config/pcmanfm
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
+  d_ranger:
+    src: config/ranger
+    dst: ~/.config/ranger
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  f_picom.conf:
+    src: config/picom.conf
+    dst: ~/.config/picom.conf
+  f_config.ini:
+    src: config/spicetify/config.ini
+    dst: ~/.config/spicetify/config.ini
+profiles:
+  archlinux:
+    dotfiles:
+    - f_zlogin
+    - f_zlogout
+    - f_zpreztorc
+    - f_zprofile
+    - f_zshenv
+    - f_zshrc
+    - f_xresources
+    - f_bashrc
+    - f_dmrc
+    - f_wallpaper.jpg
+    - f_xsettingsd
+    - d_bin
+    - d_dunst
+    - d_gtk-3.0
+    - d_i3
+    - d_i3status
+    - d_nvim
+    - d_pcmanfm
+    - d_polybar
+    - d_ranger
+    - d_rofi
+    - f_picom.conf
+    - f_config.ini
