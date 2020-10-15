@@ -1,5 +1,5 @@
 configuration {
-	modi: "run,drun,window";
+    modi: "run,drun,window";
     width: 60;
     lines: 12;
     columns: 3;
@@ -7,8 +7,9 @@ configuration {
     location: 0;
     padding: 25;
     sidebar-mode: true;
-	color-normal: "#005E6A8C, #D8DEE9, #005E6A8C, #005E6A8C, #BF616A";
-	color-urgent: "#CC5E6A8C, #EBCB8B, #CC5E6A8C, #CC5E6A8C, #EBCB8B";
-	color-active: "#CC5E6A8C, #D08770, #CC5E6A8C, #CC5E6A8C, #D08770";
-	color-window: "#CC5E6A8C, #CC5E6A8C, #CC5E6A8C";
+    color-normal: "#00282A36, #D8DEE9, #00282A36, #00282A36, #FF5555";
+    color-urgent: "#CC282A36, #F1FA8C, #CC282A36, #CC282A36, #F1FA8C";
+    color-active: "#CC282A36, #D08770, #CC282A36, #CC282A36, #D08770";
+    color-window: "#CC282A36, #CC282A36, #CC282A36";
 }
+

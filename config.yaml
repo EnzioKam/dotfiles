@@ -72,6 +72,9 @@ dotfiles:
   f_config.ini:
     src: config/spicetify/config.ini
     dst: ~/.config/spicetify/config.ini
+  d_urxvt:
+    src: urxvt
+    dst: ~/.urxvt
 profiles:
   archlinux:
     dotfiles:
@@ -98,3 +101,4 @@ profiles:
     - d_rofi
     - f_picom.conf
     - f_config.ini
+    - d_urxvt
