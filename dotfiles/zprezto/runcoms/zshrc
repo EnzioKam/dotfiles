@@ -39,4 +39,5 @@ alias ls='exa'
 alias lsa='exa -a'
 alias lsla='exa -la'
 alias dotdrop='/home/enzio/dotfiles/dotdrop.sh --cfg=/home/enzio/dotfiles/config.yaml'
+alias yaydev='yay -Syu --devel --timeupdate'
 

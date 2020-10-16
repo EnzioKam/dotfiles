@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 Plug 'itchyny/lightline.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'arcticicestudio/nord-vim'
@@ -11,14 +10,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-mucomplete'
 Plug 'sheerun/vim-polyglot'
-
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 let g:dracula_colorterm = 0
 colorscheme dracula
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
-      \ }
+            \ 'colorscheme': 'dracula',
+            \ }
 let g:rainbow_active = 1
 
 :syntax enable
@@ -41,8 +40,12 @@ set background=dark
 filetype plugin on
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") |
+            \ Startify | NERDTree | wincmd w | endif
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0])
+            \ && !exists("s:std_in") |
+            \ exe 'NERDTree' argv()[0] | wincmd p |
+            \ ene | exe 'cd '.argv()[0] | Startify | endif
 let NERDTreeShowHidden=1
 
 set splitbelow
@@ -66,4 +69,23 @@ set completeopt+=menuone,noselect
 set shortmess+=c
 set belloff+=ctrlg
 let g:mucomplete#enable_auto_at_startup = 1
+
+autocmd BufWinEnter * highlight ExtraWhitespace ctermbg=darkred
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+
+let g:startify_custom_header = [
+            \ '|-|----------------------------------------------|-|',
+            \ '| |______________________________________________| |',
+            \ '| |     _   __ ______ ____  _    __ ____ __  ___ | |',
+            \ '| |    / | / // ____// __ \| |  / //  _//  |/  / | |',
+            \ '| |   /  |/ // __/  / / / /| | / / / / / /|_/ /  | |',
+            \ '| |  / /|  // /___ / /_/ / | |/ /_/ / / /  / /   | |',
+            \ '| | /_/ |_//_____/ \____/  |___//___//_/  /_/    | |',
+            \ '| |----------------------------------------------| |',
+            \ '|_|______________________________________________|_|'
+            \ ]
+let g:startify_lists = [
+            \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+            \ ]
+let g:startify_bookmarks = ['~/.zshrc', '~/.vimrc', '~/.i3config', '~/.picomconfig']
 
