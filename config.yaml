@@ -75,6 +75,9 @@ dotfiles:
   d_urxvt:
     src: urxvt
     dst: ~/.urxvt
+  d_bat:
+    src: config/bat
+    dst: ~/.config/bat
 profiles:
   archlinux:
     dotfiles:
@@ -102,3 +105,4 @@ profiles:
     - f_picom.conf
     - f_config.ini
     - d_urxvt
+    - d_bat
