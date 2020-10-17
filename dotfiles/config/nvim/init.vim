@@ -85,7 +85,8 @@ let g:startify_custom_header = [
             \ '|_|______________________________________________|_|'
             \ ]
 let g:startify_lists = [
-            \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+            \ { 'type': 'bookmarks', 'header': ['   Bookmarks']         },
+            \ { 'type': 'dir',       'header': ['   Current'.getcwd()]  },
             \ ]
 let g:startify_bookmarks = ['~/.zshrc', '~/.vimrc', '~/.i3config', '~/.picomconfig']
 
