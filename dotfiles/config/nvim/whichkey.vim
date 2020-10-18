@@ -2,6 +2,7 @@ call which_key#register('<Space>', "g:which_key_map")
 let g:which_key_map = {}
 let g:which_key_map['d'] = 'scroll-down'
 let g:which_key_map['u'] = 'scroll-up'
+let g:which_key_map['n'] = 'toggle-tree'
 let g:which_key_map['q'] = [ 'q', 'quit' ]
 let g:which_key_map['Q'] = [ 'qa!', 'quit-without-saving' ]
 
@@ -46,7 +47,7 @@ let g:which_key_map['w'] = {
             \ 'K' :  'expand-window-up'             ,
             \ '=' :  'balance-window'               ,
             \ 's' :  'split-window-below'           ,
-            \ 'v' :  'split-window-below'           ,
+            \ 'v' :  'split-window-right'           ,
             \ 'r' :  'rotate-windows'               ,
             \ 'q' :  'quit-window'                  ,
             \ }

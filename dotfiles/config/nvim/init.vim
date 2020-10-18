@@ -16,9 +16,34 @@ call plug#end()
 
 let g:dracula_colorterm = 0
 colorscheme dracula
+
 let g:lightline = {
             \ 'colorscheme': 'dracula',
+            \ 'separator': { 'left': "\uE0B0" },
+            \ 'subseparator': { 'left': "\uE0B1", 'right': "\uE0B3" },
+            \ 'component': {
+            \   'lineinfo': "\uf77a %3l:%-2c",
+            \ },
+            \ 'component_function': {
+            \   'filetype': 'MyFiletype',
+            \   'fileformat': 'MyFileformat',
             \ }
+            \ }
+
+function! MyFiletype()
+    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
+let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
+let s:palette.inactive.middle = s:palette.normal.middle
+let s:palette.tabline.middle = s:palette.normal.middle
+call insert(s:palette.normal.right, s:palette.normal.left[1], 0)
+
 let g:rainbow_active = 1
 
 set nocompatible
@@ -29,7 +54,6 @@ set autoread
 set backspace=indent,eol,start
 set bs=2
 set display=lastline
-set encoding=utf-8
 set hlsearch
 set incsearch
 set laststatus=2
@@ -90,8 +114,9 @@ let g:startify_custom_header = [
             \ '|_|______________________________________________|_|'
             \ ]
 let g:startify_lists = [
+            \ { 'type': 'commands',  'header': ['   Commands']          },
             \ { 'type': 'bookmarks', 'header': ['   Bookmarks']         },
-            \ { 'type': 'dir',       'header': ['   Current'.getcwd()]  },
+            \ { 'type': 'dir',       'header': ['   Current'.getcwd()]  }
             \ ]
 let g:startify_bookmarks = [
             \ '~/.zprezto/runcoms/zshrc',
@@ -100,6 +125,10 @@ let g:startify_bookmarks = [
             \ '~/.config/nvim/whichkey.vim',
             \ '~/.i3config',
             \ '~/.picomconfig'
+            \ ]
+let g:startify_commands = [
+            \ { 'up': [ 'Update Plugins', ':PlugUpdate' ]       },
+            \ { 'ug': [ 'Upgrade vim-plug', ':PlugUpgrade' ]    }
             \ ]
 
 exe 'source' '~/.config/nvim/keybinds.vim'

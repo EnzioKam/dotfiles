@@ -18,6 +18,8 @@ let g:mapleader = "\<Space>"
 nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
 set timeoutlen=200
 
+map <Leader>n :NERDTreeToggle<CR>
+
 " Remappings from vim-better-default at
 " https://github.com/lichengxu/vim-better-default
 nnoremap <silent> <Leader>q  :q<CR>

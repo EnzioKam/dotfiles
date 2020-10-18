@@ -70,7 +70,7 @@ URxvt*externalBorder:	0
 URxvt.geometry:			84x22
 
 ! perl extensions
-URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select,font-size
 
 ! macros for clipboard and selection
 URxvt.copyCommand:		xclip -i -selection clipboard
@@ -83,7 +83,12 @@ URxvt.keysym.M-s:		perl:keyboard-select:search
 URxvt.keysym.M-u:		perl:url-select:select_next
 URxvt.urlLauncher:		firefox
 URxvt.underlineURLs:	true
-URxvt.urlButton:		1     
+URxvt.urlButton:		1
+
+! Font resizing keybinds
+URxvt.keysym.C-equal:     font-size:increase
+URxvt.keysym.C--:   font-size:decrease
+URxvt.keysym.C-0:  font-size:reset
 
 ! scroll one line
 URxvt.keysym.Shift-Up:		command:\033]720;1\007
