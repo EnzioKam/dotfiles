@@ -12,6 +12,7 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/nerdtree-dash'
 Plug 'liuchengxu/vim-which-key'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 let g:dracula_colorterm = 0

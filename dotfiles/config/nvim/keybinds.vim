@@ -118,3 +118,4 @@ nnoremap <Leader>w- <C-W>s
 nnoremap <Leader>wv <C-W>v
 nnoremap <Leader>w\| <C-W>v
 nnoremap <Leader>w2 <C-W>v
+
