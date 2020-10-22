@@ -23,9 +23,9 @@ bindsym $super+m [class=Spotify] floating enable, resize set 1250 92, move posit
 # Volume control
 set $volumepath $HOME/scripts/i3-volume/volume
 set $volumestep 5
-bindsym XF86AudioRaiseVolume exec $volumepath -lnpy -i $volumestep
-bindsym XF86AudioLowerVolume exec $volumepath -lnpy -d $volumestep
-bindsym XF86AudioMute        exec $volumepath -lmny
+bindsym XF86AudioRaiseVolume exec $volumepath -lny up $volumestep
+bindsym XF86AudioLowerVolume exec $volumepath -lny down $volumestep
+bindsym XF86AudioMute        exec $volumepath -lny mute
 
 # Screen brightness control
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
@@ -136,7 +136,6 @@ client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
 client.background       $bg
 
 # Autostart
