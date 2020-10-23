@@ -76,7 +76,6 @@ set report=0
 set linespace=0
 set pumheight=20
 set expandtab
-set background=dark
 set number
 
 set completeopt+=menuone,noselect

@@ -5,6 +5,8 @@ let g:which_key_map['u'] = 'scroll-up'
 let g:which_key_map['n'] = 'toggle-tree'
 let g:which_key_map['q'] = [ 'q', 'quit' ]
 let g:which_key_map['Q'] = [ 'qa!', 'quit-without-saving' ]
+let g:which_key_map['>'] = 'indent'
+let g:which_key_map['<'] = 'unindent'
 
 let g:which_key_map['b'] = {
             \ 'name' : '+buffer'       ,
