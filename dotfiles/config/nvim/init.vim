@@ -20,14 +20,15 @@ colorscheme dracula
 
 let g:lightline = {
             \ 'colorscheme': 'dracula',
-            \ 'separator': { 'left': "\uE0B0" },
-            \ 'subseparator': { 'left': "\uE0B1", 'right': "\uE0B3" },
+            \ 'separator': { 'left': "\uE0BC", 'right': "\uE0BA" },
+            \ 'subseparator': { 'left': "\uE0BD", 'right': "\uE0BB" },
             \ 'component': {
             \   'lineinfo': "\uf77a %3l:%-2c",
             \ },
             \ 'component_function': {
             \   'filetype': 'MyFiletype',
             \   'fileformat': 'MyFileformat',
+            \   'readonly': 'MyReadonly',
             \ }
             \ }
 
@@ -37,6 +38,10 @@ endfunction
 
 function! MyFileformat()
     return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
+
+function! MyReadonly()
+    return &readonly ? "\u2716" : ''
 endfunction
 
 let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette

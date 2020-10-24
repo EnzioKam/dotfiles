@@ -10,6 +10,8 @@ Requirements:
 List of configurations:
 - bash
 - zsh using [Prezto](https://github.com/sorin-ionescu/prezto)
+- powerlevel10k
+- termite
 - Xresources
 - dunst
 - GTK 3
@@ -22,6 +24,7 @@ List of configurations:
 - pcmanfm
 - rofi
 - spicetify
+- bat
 
 List of custom scripts in [bin](dotfiles/bin)
 - `colortest` - prints coloured text on coloured backgrounds
@@ -31,3 +34,4 @@ List of custom scripts in [bin](dotfiles/bin)
 - `pfetch_run` - runs pfetch with printcols in intervals
 - `pipes` - the animated terminal screensaver
 - `scrotselect` - helper script to run scrot on keybind
+

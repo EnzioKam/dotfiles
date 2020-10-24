@@ -26,6 +26,7 @@ fi
 export PATH=$PATH:/home/enzio/bin/
 export PF_INFO='ascii title os host kernel uptime pkgs memory wm shell'
 export FZF_DEFAULT_COMMAND='fd -H'
+source /etc/profile.d/vte.sh
 
 # Alias for Editor
 alias vim='nvim'

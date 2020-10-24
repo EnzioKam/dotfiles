@@ -20,7 +20,8 @@ bindsym $super+Shift+f exec pcmanfm
 bindsym $super+Shift+c exec code
 bindsym $super+m [class=Spotify] floating enable, resize set 1250 92, move position center, move down 475 px, move scratchpad
 
-# Volume control
+# Volume control with notifications
+# https://github.com/hastinbe/i3-volume
 set $volumepath $HOME/scripts/i3-volume/volume
 set $volumestep 5
 bindsym XF86AudioRaiseVolume exec $volumepath -lny up $volumestep
@@ -146,6 +147,9 @@ exec --no-startup-id betterlockscreen -w
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
 exec --no-startup-id $HOME/bin/load_layout
+# Reload polybar when restarting i3
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Alternate new window layout
+# https://github.com/olemartinorg/i3-alternating_layout
 exec_always $HOME/scripts/i3-alt-layout/alternating_layouts.py
 

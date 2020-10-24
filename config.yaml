@@ -75,6 +75,12 @@ dotfiles:
   d_bat:
     src: config/bat
     dst: ~/.config/bat
+  f_p10k.zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
+  d_termite:
+    src: config/termite
+    dst: ~/.config/termite
 profiles:
   archlinux:
     dotfiles:
@@ -102,3 +108,5 @@ profiles:
     - f_picom.conf
     - f_config.ini
     - d_bat
+    - f_p10k.zsh
+    - d_termite
