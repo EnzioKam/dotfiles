@@ -99,6 +99,7 @@ nnoremap <silent> <Leader>f9 :set foldlevel=9<CR>
 nnoremap <Leader>ww <C-W>w
 nnoremap <Leader>wr <C-W>r
 nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>wn <C-W>n
 nnoremap <Leader>wq <C-W>q
 nnoremap <Leader>wj <C-W>j
 nnoremap <Leader>wk <C-W>k

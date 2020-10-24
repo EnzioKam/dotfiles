@@ -3,7 +3,7 @@
 
 i3-msg "workspace 8; append_layout ~/.config/i3/workspace-8.json"
 
-(urxvt -name btm_instance -e btm --battery --group &)
-(urxvt -name pipes_instance -e ~/bin/pipes &)
-(urxvt -name pfetch_instance -e ~/bin/pfetch_run &)
+(termite -t btm_instance -e btm\ --battery\ --group &)
+(termite -t pipes_instance -e ~/bin/pipes &)
+(termite -t pfetch_instance -e ~/bin/pfetch_run &)
 

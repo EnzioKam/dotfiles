@@ -36,6 +36,7 @@ let g:which_key_map['w'] = {
             \ 'name' : '+windows'                   ,
             \ 'w' :  'other-window'                 ,
             \ 'd' :  'delete-window'                ,
+            \ 'n' :  'new-window'                   ,
             \ '-' :  'split-window-below'           ,
             \ '|' :  'split-window-right'           ,
             \ '2' :  'layout-double-columns'        ,

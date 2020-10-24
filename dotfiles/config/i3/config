@@ -115,7 +115,7 @@ assign [Class=MellowPlayer] 6
 assign [class=Lxappearance|Pavucontrol] 7
 for_window [class=zoom] move to workspace 7
 for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|Spotify|Zoom] floating enable
-for_window [class=URxvt|Firefox|File-roller|Lxappearance|Pavucontrol] focus
+for_window [class=Termite|Firefox|File-roller|Lxappearance|Pavucontrol] focus
 for_window [class=Spotify] resize set 1250 92, move position center, move down 475 px
 
 # Gap options

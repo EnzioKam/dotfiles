@@ -4,10 +4,47 @@
     "layout": "splith",
     "percent": null,
     "rect": {
-       "height": 488,
-       "width": 778,
+       "height": 896,
+       "width": 1024,
+       "x": 44,
+       "y": 52
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "user_on",
+            "geometry": {
+               "height": 556,
+               "width": 864,
+               "x": 0,
+               "y": 0
+            },
+            "name": "btm_instance",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Termite$",
+                "instance": "^termite$",
+                "title": "^btm_instance$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "percent": null,
+    "rect": {
+       "height": 486,
+       "width": 779,
        "x": 1114,
-       "y": 51
+       "y": 53
     },
     "type": "floating_con",
     "nodes": [
@@ -16,18 +53,18 @@
             "current_border_width": 0,
             "floating": "user_on",
             "geometry": {
-               "height": 488,
-               "width": 888,
+               "height": 556,
+               "width": 864,
                "x": 0,
                "y": 0
             },
-            "name": "pipes",
+            "name": "pipes_instance",
             "percent": 1,
             "swallows": [
                {
-                "class": "^URxvt$",
-                "instance": "^pipes_instance$",
-                "title": "^pipes$"
+                "class": "^Termite$",
+                "instance": "^termite$",
+                "title": "^pipes_instance$"
                }
             ],
             "type": "con"
@@ -41,10 +78,10 @@
     "layout": "splith",
     "percent": null,
     "rect": {
-       "height": 900,
-       "width": 1028,
-       "x": 41,
-       "y": 51
+       "height": 381,
+       "width": 519,
+       "x": 1262,
+       "y": 568
     },
     "type": "floating_con",
     "nodes": [
@@ -53,55 +90,18 @@
             "current_border_width": 0,
             "floating": "user_on",
             "geometry": {
-               "height": 488,
-               "width": 888,
+               "height": 556,
+               "width": 864,
                "x": 0,
                "y": 0
             },
-            "name": "btm",
+            "name": "pfetch_instance",
             "percent": 1,
             "swallows": [
                {
-                "class": "^URxvt$",
-                "instance": "^btm_instance$",
-                "title": "^btm$"
-               }
-            ],
-            "type": "con"
-        }
-    ]
-}
-
-{
-    "border": "normal",
-    "floating": "auto_off",
-    "layout": "splith",
-    "percent": null,
-    "rect": {
-       "height": 348,
-       "width": 518,
-       "x": 1270,
-       "y": 600
-    },
-    "type": "floating_con",
-    "nodes": [
-        {
-            "border": "pixel",
-            "current_border_width": 0,
-            "floating": "user_on",
-            "geometry": {
-               "height": 488,
-               "width": 888,
-               "x": 0,
-               "y": 0
-            },
-            "name": "pfetch_run",
-            "percent": 1,
-            "swallows": [
-               {
-                "class": "^URxvt$",
-                "instance": "^pfetch_instance$",
-                "title": "^pfetch_run$"
+                "class": "^Termite$",
+                "instance": "^termite$",
+                "title": "^pfetch_instance$"
                }
             ],
             "type": "con"
