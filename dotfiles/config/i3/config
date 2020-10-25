@@ -146,7 +146,7 @@ exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP1
 exec --no-startup-id betterlockscreen -w
 exec --no-startup-id nm-applet
 exec --no-startup-id numlockx on
-exec --no-startup-id $HOME/bin/load_layout
+exec --no-startup-id $HOME/bin/load-layout
 # Reload polybar when restarting i3
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Alternate new window layout
