@@ -3,10 +3,11 @@ configuration {
     width: 60;
     lines: 12;
     columns: 3;
-    font: "DejaVu Sans Mono 11";
+    font: "DejaVu Sans Mono 12";
     location: 0;
-    padding: 25;
+    padding: 30;
     sidebar-mode: true;
+    show-icons: true;
     color-normal: "#00282A36, #D8DEE9, #00282A36, #00282A36, #FF5555";
     color-urgent: "#CC282A36, #F1FA8C, #CC282A36, #CC282A36, #F1FA8C";
     color-active: "#CC282A36, #D08770, #CC282A36, #CC282A36, #D08770";
