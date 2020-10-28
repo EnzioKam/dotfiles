@@ -41,7 +41,7 @@ function! MyFileformat()
 endfunction
 
 function! MyReadonly()
-    return &readonly ? "\u2716" : ''
+    return &readonly ? "\uF023" : ''
 endfunction
 
 let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
