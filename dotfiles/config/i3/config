@@ -1,3 +1,4 @@
+# vim: filetype=i3config
 set $super Mod4
 set $alt Mod1
 floating_modifier $super

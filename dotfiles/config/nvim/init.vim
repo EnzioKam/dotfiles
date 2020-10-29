@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'luochen1990/rainbow'
 Plug 'preservim/nerdcommenter'
@@ -13,6 +14,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/nerdtree-dash'
 Plug 'liuchengxu/vim-which-key'
 Plug 'ap/vim-css-color'
+Plug 'mboughaba/i3config.vim'
 call plug#end()
 
 let g:dracula_colorterm = 0
@@ -25,10 +27,25 @@ let g:lightline = {
             \ 'component': {
             \   'lineinfo': "\uf77a %3l:%-2c",
             \ },
+            \ 'tabline': {
+            \   'left': [ ['buffers'] ],
+            \   'right' : [ [ ] ],
+            \ },
+            \ 'tabline_separator': { 'left': "\uE0B0", 'right': '' },
+            \ 'tabline_subseparator': { 'left': "\uE0B1", 'right': '' },
+            \ 'component_expand': {
+            \   'buffers': 'lightline#bufferline#buffers'
+            \ },
+            \ 'component_type': {
+            \   'buffers': 'tabsel'
+            \ },
             \ 'component_function': {
             \   'filetype': 'MyFiletype',
             \   'fileformat': 'MyFileformat',
             \   'readonly': 'MyReadonly',
+            \ },
+            \ 'component_raw': {
+            \   'buffers': 1,
             \ }
             \ }
 
@@ -49,6 +66,11 @@ let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
 let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
 call insert(s:palette.normal.right, s:palette.normal.left[1], 0)
+
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#unicode_symbols = 1
+let g:lightline#bufferline#min_buffer_count = 2
+let g:lightline#bufferline#clickable = 1
 
 let g:rainbow_active = 1
 
@@ -82,6 +104,7 @@ set linespace=0
 set pumheight=20
 set expandtab
 set number
+set showtabline=2
 
 set completeopt+=menuone,noselect
 set shortmess+=c
