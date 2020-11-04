@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for i in *.xopp; do
+    filename=${i%.*}
+    out=graded/${filename}_graded.pdf
+    com.github.xournalpp.xournalpp $i -p $out
+done

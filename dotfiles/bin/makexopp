@@ -1,0 +1,30 @@
+#!/usr/bin/python
+# Taken from https://github.com/xournalpp/xournalpp/issues/2204/
+
+import os
+import sys
+import subprocess
+
+workdir = sys.argv[1]
+xournal_cmd = '/usr/bin/flatpak run com.github.xournalpp.xournalpp'
+
+def instantiate_xopp(workdir, xournal_cmd):
+    """
+    For each pdf file in workdir, it checks that the xopp has been
+    instantiated for pdf annotation, and if not creates one (then
+    requires user to manually save).
+    """
+    xournal_cmd = xournal_cmd.split(' ')
+    if workdir[-1]!='/':
+        workdir = workdir +'/'
+    for file in os.listdir(workdir):
+        if file.endswith(".pdf"):
+            check_name = file+'.xopp'
+            if not os.path.exists(workdir+check_name):
+                p = subprocess.Popen([*xournal_cmd, workdir+file], stderr=subprocess.DEVNULL)
+                # wait until file closed by user
+                p.wait()
+    print("All files instantiated.")
+
+instantiate_xopp(workdir, xournal_cmd)
+
