@@ -109,15 +109,14 @@ bindsym $super+Shift+q mode "Exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 
 # Window rules (find class with xprop)
 for_window [class=".*"] border pixel 0
-assign [class=firefox] 2
+assign [class=firefox|Brave] 2
 assign [class=Pcmanfm|File-roller|VSCodium] 3
 assign [class=qpdfview|Com.github.xournalpp.xournalpp|DesktopEditors] 4
-assign [class=Telegram|discord] 5
-assign [Class=MellowPlayer] 6
+assign [class=Telegram] 5
 assign [class=Lxappearance|Pavucontrol] 7
-for_window [class=zoom] move to workspace 7
-for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|Spotify|Zoom] floating enable
-for_window [class=Termite|Firefox|File-roller|Lxappearance|Pavucontrol] focus
+for_window [class=zoom] move to workspace 6
+for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|Spotify|zoom] floating enable
+for_window [class=Termite|firefox|Brave|File-roller|Lxappearance|Pavucontrol] focus
 for_window [class=Spotify] resize set 1250 92, move position center, move down 475 px
 
 # Gap options
