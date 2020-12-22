@@ -45,6 +45,7 @@ dotfiles:
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
+    chmod: '700'
   d_i3:
     src: config/i3
     dst: ~/.config/i3
@@ -57,6 +58,7 @@ dotfiles:
   d_pcmanfm:
     src: config/pcmanfm
     dst: ~/.config/pcmanfm
+    chmod: '700'
   d_polybar:
     src: config/polybar
     dst: ~/.config/polybar
