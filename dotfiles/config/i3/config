@@ -19,7 +19,7 @@ bindsym $super+Shift+l exec betterlockscreen -s
 bindsym $super+b exec brave
 bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec pcmanfm
-bindsym $super+Shift+c exec code
+bindsym $super+Shift+c exec vscodium
 bindsym $super+m [class=Spotify] floating enable, resize set 1250 92, move position center, move down 475 px, move scratchpad
 
 # Volume control with notifications
