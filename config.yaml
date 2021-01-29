@@ -83,6 +83,9 @@ dotfiles:
   d_termite:
     src: config/termite
     dst: ~/.config/termite
+  f_userchrome.css:
+    src: config/firefox/userChrome.css
+    dst: ~/.config/firefox/userChrome.css
 profiles:
   archlinux:
     dotfiles:
@@ -112,3 +115,4 @@ profiles:
     - d_bat
     - f_p10k.zsh
     - d_termite
+    - f_userchrome.css
