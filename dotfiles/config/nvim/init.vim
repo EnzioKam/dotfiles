@@ -113,6 +113,7 @@ let g:mucomplete#enable_auto_at_startup = 1
 
 autocmd BufWinEnter * highlight ExtraWhitespace ctermbg=darkred
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd BufWritePre * %s/\s\+$//e
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") |

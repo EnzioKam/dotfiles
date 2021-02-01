@@ -21,6 +21,10 @@
     border: none !important;
 }
 
+.tab-background[selected="true"] {
+    background: #3B4252 !important;
+}
+
 .tab-line {
     display: none !important;
 }
@@ -29,6 +33,8 @@
     --toolbarbutton-active-background: transparent !important;
     --toolbarbutton-hover-background: transparent !important;
     -moz-appearance: none !important;
+    padding: 6px 4px 4px 6px !important;
+    background: #2E3440 !important;
 }
 
 #browser #appcontent #tabbrowser-tabbox findbar,
@@ -36,6 +42,10 @@
     -moz-appearance: none !important;
     border: none !important;
     background: transparent !important;
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    border-width: 0px !important;
 }
 
 .findbar-find-previous,
