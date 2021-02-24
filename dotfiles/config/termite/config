@@ -6,7 +6,7 @@ cell_height_scale = 1.0
 cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = false
-font = MesloLGS NF 12
+font = MesloLGS NF 13
 fullscreen = true
 icon_name = terminal
 mouse_autohide = false
@@ -81,7 +81,7 @@ color20 = #62D6E8
 color21 = #F1F2F8
 
 [hints]
-font = MesloLGS NF 11
+font = FiraCode Nerd Font 12
 foreground = #DCDCCC
 background = #3F3F3F
 active_foreground = #E68080

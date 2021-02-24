@@ -51,10 +51,6 @@ bindsym $super+s layout toggle split
 bindsym $super+space floating toggle
 bindsym $super+Shift+space focus mode_toggle
 
-# Scratchpad control
-# bindsym $alt+Control+Up exec $HOME/bin/i3-scratchpad
-# bindsym $alt+Control+Down exec $HOME/bin/i3-scratchpad
-
 # Workspace control
 bindsym $alt+Control+Right workspace next
 bindsym $alt+Control+Left workspace prev
@@ -117,7 +113,6 @@ assign [class=Lxappearance|Pavucontrol] 7
 for_window [class=zoom] move to workspace 6
 for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|zoom] floating enable
 for_window [class=Termite|firefox|Brave|File-roller|Lxappearance|Pavucontrol] focus
-# for_window [class=Spotify] resize set 1250 92, move position center, move down 475 px
 
 # Gap options
 smart_gaps inverse_outer
