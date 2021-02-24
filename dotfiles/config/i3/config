@@ -18,9 +18,8 @@ bindsym $super+l exec betterlockscreen -l
 bindsym $super+Shift+l exec betterlockscreen -s
 bindsym $super+b exec brave
 bindsym $super+Shift+w exec firefox
-bindsym $super+Shift+f exec pcmanfm
+bindsym $super+Shift+f exec thunar
 bindsym $super+Shift+c exec vscodium
-bindsym $super+m [class=Spotify] floating enable, resize set 1250 92, move position center, move down 475 px, move scratchpad
 
 # Volume control with notifications
 # https://github.com/hastinbe/i3-volume
@@ -53,8 +52,8 @@ bindsym $super+space floating toggle
 bindsym $super+Shift+space focus mode_toggle
 
 # Scratchpad control
-bindsym $alt+Control+Up exec $HOME/bin/i3-scratchpad
-bindsym $alt+Control+Down exec $HOME/bin/i3-scratchpad
+# bindsym $alt+Control+Up exec $HOME/bin/i3-scratchpad
+# bindsym $alt+Control+Down exec $HOME/bin/i3-scratchpad
 
 # Workspace control
 bindsym $alt+Control+Right workspace next
@@ -111,14 +110,14 @@ bindsym $super+Shift+q mode "Exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 # Window rules (find class with xprop)
 for_window [class=".*"] border pixel 0
 assign [class=firefox|Brave] 2
-assign [class=Pcmanfm|File-roller|VSCodium] 3
+assign [class=Thunar|File-roller|VSCodium] 3
 assign [class=qpdfview|Com.github.xournalpp.xournalpp|DesktopEditors] 4
 assign [class=Telegram] 5
 assign [class=Lxappearance|Pavucontrol] 7
 for_window [class=zoom] move to workspace 6
-for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|Spotify|zoom] floating enable
+for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|zoom] floating enable
 for_window [class=Termite|firefox|Brave|File-roller|Lxappearance|Pavucontrol] focus
-for_window [class=Spotify] resize set 1250 92, move position center, move down 475 px
+# for_window [class=Spotify] resize set 1250 92, move position center, move down 475 px
 
 # Gap options
 smart_gaps inverse_outer
@@ -152,5 +151,5 @@ exec --no-startup-id $HOME/bin/load-layout
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Alternate new window layout
 # https://github.com/olemartinorg/i3-alternating_layout
-exec_always $HOME/scripts/i3-alt-layout/alternating_layouts.py
+exec_always --no-startup-id $HOME/scripts/i3-alternating-layout/alternating_layouts.py
 

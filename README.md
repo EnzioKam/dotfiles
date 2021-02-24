@@ -1,6 +1,6 @@
-# dotfiles
+# dotfiles (WIP)
 
-Dotfile management for Arch Linux on i3 window manager.
+Dotfile management for EndeavorOS on i3 window manager.
 
 Requirements:
 - Python 3
@@ -16,14 +16,10 @@ List of configurations:
 - dunst
 - GTK 3
 - i3
-- i3status (unused)
 - polybar
 - picom
 - neovim
-- ranger
-- pcmanfm
 - rofi
-- spicetify
 - bat
 
 List of custom scripts in [bin](dotfiles/bin)
