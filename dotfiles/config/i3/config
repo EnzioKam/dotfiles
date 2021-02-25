@@ -19,7 +19,7 @@ bindsym $super+Shift+l exec betterlockscreen -s
 bindsym $super+b exec brave
 bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec thunar
-bindsym $super+Shift+c exec vscodium
+bindsym $super+Shift+c exec code
 
 # Volume control with notifications
 # https://github.com/hastinbe/i3-volume
@@ -106,7 +106,7 @@ bindsym $super+Shift+q mode "Exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
 # Window rules (find class with xprop)
 for_window [class=".*"] border pixel 0
 assign [class=firefox|Brave] 2
-assign [class=Thunar|File-roller|VSCodium] 3
+assign [class=Thunar|File-roller|code-oss] 3
 assign [class=qpdfview|Com.github.xournalpp.xournalpp|DesktopEditors] 4
 assign [class=Telegram] 5
 assign [class=Lxappearance|Pavucontrol] 7
