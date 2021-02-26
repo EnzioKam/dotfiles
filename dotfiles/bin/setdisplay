@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ $1 == 'off' ]; then
+    xrandr --output HDMI-1-1 --off;
+    i3-msg restart;
+elif [ $1 == 'mirror' ]; then
+    xrandr --output HDMI-1-1 --same-as eDP1;
+    i3-msg restart;
+elif [ $1 == 'extend' ]; then
+    xrandr --output HDMI-1-1 --auto --right-of eDP1;
+    i3-msg restart;
+else
+    echo 'Invalid Argument';
+fi

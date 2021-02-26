@@ -9,9 +9,6 @@ dotfiles:
   f_dmrc:
     src: dmrc
     dst: ~/.dmrc
-  f_gtkrc-2.0:
-    src: gtkrc-2.0
-    dst: ~/.gtkrc-2.0
   f_p10k.zsh:
     src: p10k.zsh
     dst: ~/.p10k.zsh
@@ -82,12 +79,14 @@ dotfiles:
   f_picom.conf:
     src: config/picom.conf
     dst: ~/.config/picom.conf
+  d_bin:
+    src: bin
+    dst: ~/bin
 profiles:
   enzio-p6567rsrp:
     dotfiles:
     - f_bashrc
     - f_dmrc
-    - f_gtkrc-2.0
     - f_p10k.zsh
     - f_wallpaper.jpg
     - f_xresources
@@ -110,3 +109,4 @@ profiles:
     - d_rofi
     - d_termite
     - f_picom.conf
+    - d_bin

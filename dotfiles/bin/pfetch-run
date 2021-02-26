@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export PF_INFO="ascii title os host kernel uptime pkgs memory wm shell"
+
+while :
+do
+    pfetch;
+    printf '\n';
+    $HOME/bin/printcols;
+    sleep 1800;
+done
+
