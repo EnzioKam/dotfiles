@@ -9,7 +9,8 @@ font pango: JetBrainsMono Nerd Font 10
 bindsym $super+Shift+r restart
 bindsym $super+Shift+e reload
 bindsym $super+Return exec i3-sensible-terminal
-bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'MesloLGS NF:size=10'"
+bindsym $super+Shift+d exec i3-dmenu-desktop \
+    --dmenu="dmenu -i -fn 'MesloLGS NF:size=10'"
 bindsym $super+d exec rofi -show drun
 bindsym $alt+Tab exec rofi -show window
 bindsym Print exec $HOME/bin/scrotselect
@@ -94,14 +95,8 @@ mode "resize" {
 bindsym $super+r mode "resize"
 
 # Exit control
-mode "Exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel" {
-  bindsym l exec i3-msg exit
-  bindsym r exec reboot
-  bindsym s exec poweroff
-  bindsym Escape mode "default"
-  bindsym Return mode "default"
-}
-bindsym $super+Shift+q mode "Exit: [l]ogout, [r]eboot, [s]hutdown [esc]cancel"
+bindsym $super+Shift+q exec rofi -show power-menu -modi \
+    "power-menu:~/scripts/rofi-power-menu/rofi-power-menu --choices=logout/reboot/shutdown"
 
 # Window rules (find class with xprop)
 for_window [class=".*"] border pixel 0
