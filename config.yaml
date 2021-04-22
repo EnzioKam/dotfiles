@@ -82,6 +82,9 @@ dotfiles:
   d_bin:
     src: bin
     dst: ~/bin
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
 profiles:
   enzio-p6567rsrp:
     dotfiles:
@@ -110,3 +113,4 @@ profiles:
     - d_termite
     - f_picom.conf
     - d_bin
+    - f_starship.toml

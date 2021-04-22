@@ -1,0 +1,44 @@
+scan_timeout = 10
+
+add_newline = true
+
+format = """
+[┌](bold purple) $directory\
+$git_status$git_branch\
+$java$python$conda
+[└ $character](bold purple)"""
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[package]
+disabled = true
+symbol = " "
+
+[time]
+disabled = false
+format = '[\[ $time \]]($style) '
+utc_time_offset = "+8"
+
+[conda]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[git_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[python]
+symbol = " "
+
