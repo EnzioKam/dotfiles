@@ -73,9 +73,6 @@ dotfiles:
   d_rofi:
     src: config/rofi
     dst: ~/.config/rofi
-  d_termite:
-    src: config/termite
-    dst: ~/.config/termite
   f_picom.conf:
     src: config/picom.conf
     dst: ~/.config/picom.conf
@@ -85,6 +82,9 @@ dotfiles:
   f_starship.toml:
     src: config/starship.toml
     dst: ~/.config/starship.toml
+  d_alacritty:
+    src: config/alacritty
+    dst: ~/.config/alacritty
 profiles:
   enzio-p6567rsrp:
     dotfiles:
@@ -110,7 +110,7 @@ profiles:
     - d_i3
     - d_polybar
     - d_rofi
-    - d_termite
     - f_picom.conf
     - d_bin
     - f_starship.toml
+    - d_alacritty

@@ -107,7 +107,7 @@ assign [class=Telegram] 5
 assign [class=Lxappearance|Pavucontrol] 7
 for_window [class=zoom] move to workspace 6
 for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|zoom] floating enable
-for_window [class=Termite|firefox|Brave|File-roller|Lxappearance|Pavucontrol] focus
+for_window [class=Alacritty|firefox|Brave|File-roller|Lxappearance|Pavucontrol] focus
 
 # Gap options
 smart_gaps inverse_outer
