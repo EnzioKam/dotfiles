@@ -1,3 +1,5 @@
+@import "protonfix.css";
+
 #titlebar {
     -moz-box-ordinal-group: 2 !important;
 }
