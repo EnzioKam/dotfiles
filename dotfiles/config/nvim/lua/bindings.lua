@@ -11,6 +11,7 @@ map("n", "<leader>b", ":Buffers<CR>")
 map("n", "<leader>h", ":History<CR>")
 map("n", "<leader>f", ":Files<CR>")
 map("n", "<C-n>", ":NvimTreeToggle<CR>")
+map("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
 
 -- Navigate windows
 map("n", "<C-h>", "<C-w>h", {noremap = true})

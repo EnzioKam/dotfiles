@@ -1,18 +1,18 @@
-# dotfiles (WIP)
+# dotfiles
 
-Dotfile management for EndeavorOS on i3 window manager.
+Dotfile management for EndeavorOS on i3 window manager using
+[Dotdrop](https://github.com/deadc0de6/dotdrop).
 
-Requirements:
+## Dotdrop requirements:
 - Python 3
 - Git
-- [Dotdrop](https://github.com/deadc0de6/dotdrop).
 
-List of configurations:
+## List of configurations:
 - bash
 - zsh using [Prezto](https://github.com/sorin-ionescu/prezto)
-- powerlevel10k
-- termite
 - Xresources
+- starship
+- alacritty
 - dunst
 - GTK 3
 - i3
@@ -21,13 +21,18 @@ List of configurations:
 - neovim
 - rofi
 - bat
+- bottom
+- firefox
 
-List of custom scripts in [bin](dotfiles/bin)
+## List of custom scripts in [bin](dotfiles/bin)
 - `colortest` - prints coloured text on coloured backgrounds
-- `printcols` - prints all 16 terminal colors
-- `i3-scratchpad` - i3 scratchpad management
-- `load_layout` - for loading i3 workspaces on startup
-- `pfetch_run` - runs pfetch with printcols in intervals
+- `load-layout` - for loading i3 workspaces on startup
+- `pfetch-run` - runs pfetch with printcols in intervals
 - `pipes` - the animated terminal screensaver
+- `printcols` - prints all 16 terminal colors
 - `scrotselect` - helper script to run scrot on keybind
+- `setdisplay` - xrandr wrapper for setting external display
+
+## Unused
+- powerlevel10k
 

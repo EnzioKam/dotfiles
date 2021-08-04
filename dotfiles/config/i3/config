@@ -100,7 +100,7 @@ bindsym $super+Shift+q exec rofi -show power-menu -modi \
 
 # Window rules (find class with xprop)
 for_window [class=".*"] border pixel 1
-assign [class=firefox|Brave] 2
+assign [class=firefox] 2
 assign [class=Thunar|File-roller|code-oss] 3
 assign [class=qpdfview|Com.github.xournalpp.xournalpp|DesktopEditors] 4
 assign [class=Telegram] 5

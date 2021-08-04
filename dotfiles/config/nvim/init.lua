@@ -20,6 +20,7 @@ require "paq" {
     "kyazdani42/nvim-tree.lua";
     "hoob3rt/lualine.nvim";
     "lifepillar/vim-mucomplete";
+    {"iamcco/markdown-preview.nvim", run=fn["mkdp#util#install"]};
 }
 require("gitsigns").setup()
 require("indent_blankline").setup {
@@ -42,6 +43,7 @@ require("bindings")
 
 g.colors_name = "nord"
 g['mucomplete#enable_auto_at_startup'] = 1
+g.mkdp_browser = 'brave'
 
 opt.completeopt = {"menuone", "noinsert", "noselect"}
 cmd "syntax on"
