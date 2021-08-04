@@ -19,8 +19,11 @@ require "paq" {
     "kyazdani42/nvim-web-devicons";
     "kyazdani42/nvim-tree.lua";
     "hoob3rt/lualine.nvim";
-    "lifepillar/vim-mucomplete";
     {"iamcco/markdown-preview.nvim", run=fn["mkdp#util#install"]};
+    "JuliaEditorSupport/julia-vim";
+    "neovim/nvim-lspconfig";
+    "nvim-lua/completion-nvim";
+    "ojroques/nvim-lspfuzzy";
 }
 require("gitsigns").setup()
 require("indent_blankline").setup {
@@ -39,11 +42,30 @@ require("nvim_comment").setup({
 require("lualine").setup({
     options = {theme = "nord"}
 })
+require("lspfuzzy").setup({
+    methods = {
+        "callHierachy/incomingCalls",
+	    "callHierarchy/outgoingCalls",
+	    "textDocument/codeAction",
+	    "textDocument/definition",
+	    "textDocument/documentSymbol",
+	    "textDocument/implementation",
+	    "textDocument/references",
+	    "textDocument/typeDefinition",
+	    "workspace/symbol"
+    }
+})
 require("bindings")
+require("lsp")
+
+g.diagnostic_auto_popup_while_jump = 0
+g.diagnostic_enable_virtual_text = 0
+g.diagnostic_enable_underline = 0
+g.diagnostic_timer_cycle = 200
 
 g.colors_name = "nord"
-g['mucomplete#enable_auto_at_startup'] = 1
 g.mkdp_browser = 'brave'
+g.latex_to_unicode_auto = 1
 
 opt.completeopt = {"menuone", "noinsert", "noselect"}
 cmd "syntax on"
