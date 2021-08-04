@@ -8,9 +8,9 @@ configuration {
     padding: 30;
     sidebar-mode: true;
     show-icons: true;
-    color-normal: "#00282A36, #D8DEE9, #00282A36, #00282A36, #FF5555";
-    color-urgent: "#CC282A36, #F1FA8C, #CC282A36, #CC282A36, #F1FA8C";
-    color-active: "#CC282A36, #D08770, #CC282A36, #CC282A36, #D08770";
-    color-window: "#CC282A36, #CC282A36, #CC282A36";
+    color-normal: "#2E3440, #D8DEE9, #2E3440, #2E3440, #BF616A";
+    color-urgent: "#2E3440, #EBCB8B, #2E3440, #2E3440, #EBCB8B";
+    color-active: "#2E3440, #D08770, #2E3440, #2E3440, #D08770";
+    color-window: "#2E3440, #E5E9F0, #2E3440";
 }
 

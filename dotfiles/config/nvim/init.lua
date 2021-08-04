@@ -19,6 +19,7 @@ require "paq" {
     "kyazdani42/nvim-web-devicons";
     "kyazdani42/nvim-tree.lua";
     "hoob3rt/lualine.nvim";
+    "lifepillar/vim-mucomplete";
 }
 require("gitsigns").setup()
 require("indent_blankline").setup {
@@ -27,7 +28,7 @@ require("indent_blankline").setup {
 }
 require("nvim-treesitter.configs").setup({
     ensure_installed = "maintained",
-    hightlight = {enable = true},
+    highlight = {enable = true},
     rainbow = {enable = true, extended_mode = true}
 })
 require("nvim_comment").setup({
@@ -40,6 +41,7 @@ require("lualine").setup({
 require("bindings")
 
 g.colors_name = "nord"
+g['mucomplete#enable_auto_at_startup'] = 1
 
 opt.completeopt = {"menuone", "noinsert", "noselect"}
 cmd "syntax on"

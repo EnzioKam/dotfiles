@@ -23,7 +23,7 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # PATH variables
-export PATH=$PATH:/home/enzio/bin/
+export PATH=$PATH:/home/enzio/bin/:/home/enzio/.local/bin
 export PF_INFO='ascii title os host kernel uptime pkgs memory wm shell'
 export FZF_DEFAULT_COMMAND='fd -H'
 

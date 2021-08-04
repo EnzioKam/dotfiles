@@ -99,7 +99,7 @@ bindsym $super+Shift+q exec rofi -show power-menu -modi \
     "power-menu:~/scripts/rofi-power-menu/rofi-power-menu --choices=logout/reboot/shutdown"
 
 # Window rules (find class with xprop)
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 assign [class=firefox|Brave] 2
 assign [class=Thunar|File-roller|code-oss] 3
 assign [class=qpdfview|Com.github.xournalpp.xournalpp|DesktopEditors] 4
@@ -118,11 +118,11 @@ gaps inner 20
 # from the generated scheme.
 # NOTE: The '#F0F0F0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #F0F0F0
-set_from_resource $bg i3wm.color2 #F0F0F0
+set_from_resource $fg i3wm.color2 #F0F0F0
+set_from_resource $bg i3wm.color7 #F0F0F0
 
 # class                 border  backgr. text indicator child_border
-client.focused          #FF6E67 $bg     $fg  #FF6E67   $bg
+client.focused          $bg     $bg     $fg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
@@ -131,7 +131,7 @@ client.background       $bg
 
 # Autostart
 exec --no-startup-id xsettingsd &
-exec --no-startup-id picom --daemon --experimental-backends
+exec --no-startup-id picom --daemon
 exec --no-startup-id xrandr --output HDMI-1-1 --auto --right-of eDP1
 exec --no-startup-id betterlockscreen -w
 exec --no-startup-id nm-applet
