@@ -5,7 +5,7 @@ add_newline = true
 format = """
 [┌](bold purple) $directory\
 $git_status$git_branch\
-$java$python$conda
+$java$python$conda$julia
 [└ $character](bold purple)"""
 
 [character]

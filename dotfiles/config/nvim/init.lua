@@ -24,7 +24,9 @@ require "paq" {
     "neovim/nvim-lspconfig";
     "nvim-lua/completion-nvim";
     "ojroques/nvim-lspfuzzy";
+    "windwp/nvim-autopairs";
 }
+
 require("gitsigns").setup()
 require("indent_blankline").setup {
     char = "|",
@@ -33,7 +35,8 @@ require("indent_blankline").setup {
 require("nvim-treesitter.configs").setup({
     ensure_installed = "maintained",
     highlight = {enable = true},
-    rainbow = {enable = true, extended_mode = true}
+    rainbow = {enable = true, extended_mode = true},
+    autopairs = {enable = true}
 })
 require("nvim_comment").setup({
     line_mapping = ";;",
@@ -43,6 +46,11 @@ require("lualine").setup({
     options = {theme = "nord"}
 })
 require("lspfuzzy").setup({})
+
+local npairs = require("nvim-autopairs")
+npairs.setup({check_ts = true})
+local ts_conds = require('nvim-autopairs.ts-conds')
+
 require("bindings")
 require("lsp")
 

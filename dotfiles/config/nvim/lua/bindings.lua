@@ -23,6 +23,14 @@ map("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>",
 map("n", "<leader>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>",
     {noremap = true, silent = true})
 
+local function t(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+function _G.smart_tab()
+    return vim.fn.pumvisible() == 1 and t'<C-n>' or t'<Tab>'
+end
+map("i", "<Tab>", "v:lua.smart_tab()", {expr = true, noremap = true})
+
 -- Navigate windows
 map("n", "<C-h>", "<C-w>h", {noremap = true})
 map("n", "<C-j>", "<C-w>j", {noremap = true})
