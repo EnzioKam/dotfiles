@@ -42,19 +42,7 @@ require("nvim_comment").setup({
 require("lualine").setup({
     options = {theme = "nord"}
 })
-require("lspfuzzy").setup({
-    methods = {
-        "callHierachy/incomingCalls",
-	    "callHierarchy/outgoingCalls",
-	    "textDocument/codeAction",
-	    "textDocument/definition",
-	    "textDocument/documentSymbol",
-	    "textDocument/implementation",
-	    "textDocument/references",
-	    "textDocument/typeDefinition",
-	    "workspace/symbol"
-    }
-})
+require("lspfuzzy").setup({})
 require("bindings")
 require("lsp")
 

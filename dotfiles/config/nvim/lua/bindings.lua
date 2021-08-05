@@ -7,11 +7,21 @@ local function map(mode, lhs, rhs, opts)
 end
 
 g.mapleader = " "
+-- Plugin related keybindings
 map("n", "<leader>b", ":Buffers<CR>")
 map("n", "<leader>h", ":History<CR>")
 map("n", "<leader>f", ":Files<CR>")
+map("n", "<leader>e", ":LspDiagnostics 0<CR>")
 map("n", "<C-n>", ":NvimTreeToggle<CR>")
 map("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
+map("n", "<leader>]", "<cmd>lua vim.lsp.buf.definition()<CR>",
+    {noremap = true, silent = true})
+map("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<CR>",
+    {noremap = true, silent = true})
+map("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>",
+    {noremap = true, silent = true})
+map("n", "<leader>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>",
+    {noremap = true, silent = true})
 
 -- Navigate windows
 map("n", "<C-h>", "<C-w>h", {noremap = true})
@@ -83,4 +93,14 @@ map("n", "<leader>ws", "<C-W>s", {noremap = true})
 map("n", "<leader>w-", "<C-W>s", {noremap = true})
 map("n", "<leader>wv", "<C-W>v", {noremap = true})
 map("n", "<leader>w2", "<C-W>v", {noremap = true})
+
+-- Terminal keybindings
+map("t", "<C-]>", "<C-\\><C-n>", {noremap = true})
+map("n", "<M-t>", ":te<CR>", {noremap = true})
+map("n", "<M-0>", ":b term<CR>", {noremap = true})
+map("t", "<C-j><C-k>", "<C-\\><C-N>", {noremap = true})
+map("t", "<C-h>", "<C-\\><C-N><C-w>h", {noremap = true})
+map("t", "<C-j>", "<C-\\><C-N><C-w>j", {noremap = true})
+map("t", "<C-k>", "<C-\\><C-N><C-w>k", {noremap = true})
+map("t", "<C-l>", "<C-\\><C-N><C-w>l", {noremap = true})
 
