@@ -23,24 +23,6 @@ dotfiles:
     src: xsettingsd
     dst: ~/.xsettingsd
     chmod: '755'
-  f_zlogin:
-    src: zprezto/runcoms/zlogin
-    dst: ~/.zprezto/runcoms/zlogin
-  f_zlogout:
-    src: zprezto/runcoms/zlogout
-    dst: ~/.zprezto/runcoms/zlogout
-  f_zpreztorc:
-    src: zprezto/runcoms/zpreztorc
-    dst: ~/.zprezto/runcoms/zpreztorc
-  f_zprofile:
-    src: zprezto/runcoms/zprofile
-    dst: ~/.zprezto/runcoms/zprofile
-  f_zshenv:
-    src: zprezto/runcoms/zshenv
-    dst: ~/.zprezto/runcoms/zshenv
-  f_zshrc:
-    src: zprezto/runcoms/zshrc
-    dst: ~/.zprezto/runcoms/zshrc
   d_bat:
     src: config/bat
     dst: ~/.config/bat
@@ -85,6 +67,12 @@ dotfiles:
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  f_zpreztorc:
+    src: zpreztorc
+    dst: ~/.zpreztorc
 profiles:
   enzio-p6567rsrp:
     dotfiles:
@@ -94,12 +82,6 @@ profiles:
     - f_wallpaper.jpg
     - f_xresources
     - f_xsettingsd
-    - f_zlogin
-    - f_zlogout
-    - f_zpreztorc
-    - f_zprofile
-    - f_zshenv
-    - f_zshrc
     - d_bat
     - d_bottom
     - d_dunst
@@ -114,3 +96,5 @@ profiles:
     - d_bin
     - f_starship.toml
     - d_alacritty
+    - f_zshrc
+    - f_zpreztorc

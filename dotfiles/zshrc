@@ -1,0 +1,55 @@
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# PATH variables
+export PATH=$PATH:/home/enzio/bin/:/home/enzio/.local/bin
+export PF_INFO='ascii title os host kernel uptime pkgs memory wm shell'
+export FZF_DEFAULT_COMMAND='fd -H'
+
+# Alias for Editor
+alias vim='nvim'
+alias vi='nvim'
+export VISUAL='nvim'
+export EDITOR='nvim'
+
+# Alias for utilities
+alias rm='nocorrect rm'
+alias ls='exa'
+alias lsa='exa -a'
+alias lsla='exa -laG'
+alias cat='bat --style=plain'
+alias diff='diff --color'
+alias dotdrop='/home/enzio/dotfiles/dotdrop.sh --cfg=/home/enzio/dotfiles/config.yaml'
+alias yaydev='yay -Syu --devel --timeupdate'
+alias updatenus='fluminurs --download-to ~/Documents/fluminurs --updated overwrite'
+
+# https://github.com/romkatv/powerlevel10k/issues/888
+zle-line-init() {
+    emulate -L zsh
+    [[ $CONTEXT == start ]] || return 0
+    while true; do
+        zle .recursive-edit
+        local -i ret=$?
+        [[ $ret == 0 && $KEYS == $'\4' ]] || break
+        [[ -o ignore_eof ]] || exit 0
+    done
+    local saved_prompt=$PROMPT
+    local saved_rprompt=$RPROMPT
+    PROMPT=''
+    RPROMPT=''
+    zle .reset-prompt
+    PROMPT=$saved_prompt
+    RPROMPT=$saved_rprompt
+    if (( ret )); then
+        zle .send-break
+    else
+        zle .accept-line
+    fi
+    return ret
+}
+
+zle -N zle-line-init
+eval "$(starship init zsh)"
+
