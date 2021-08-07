@@ -20,6 +20,7 @@ require "paq" {
     "kyazdani42/nvim-tree.lua";
     "hoob3rt/lualine.nvim";
     {"iamcco/markdown-preview.nvim", run=fn["mkdp#util#install"]};
+    "jakewvincent/mkdnflow.nvim";
     "JuliaEditorSupport/julia-vim";
     "neovim/nvim-lspconfig";
     "nvim-lua/completion-nvim";
@@ -46,10 +47,10 @@ require("lualine").setup({
     options = {theme = "nord"}
 })
 require("lspfuzzy").setup({})
-
 local npairs = require("nvim-autopairs")
 npairs.setup({check_ts = true})
 local ts_conds = require('nvim-autopairs.ts-conds')
+require('mkdnflow').setup({create_dirs = true})
 
 require("bindings")
 require("lsp")
@@ -60,8 +61,10 @@ g.diagnostic_enable_underline = 0
 g.diagnostic_timer_cycle = 200
 
 g.colors_name = "nord"
+g.mkdp_auto_close = 0
 g.mkdp_browser = 'brave'
 g.latex_to_unicode_auto = 1
+
 
 opt.completeopt = {"menuone", "noinsert", "noselect"}
 cmd "syntax on"
