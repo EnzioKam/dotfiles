@@ -26,6 +26,7 @@ require "paq" {
     "nvim-lua/completion-nvim";
     "ojroques/nvim-lspfuzzy";
     "windwp/nvim-autopairs";
+    "numToStr/FTerm.nvim";
 }
 
 require("gitsigns").setup()
@@ -49,8 +50,11 @@ require("lualine").setup({
 require("lspfuzzy").setup({})
 local npairs = require("nvim-autopairs")
 npairs.setup({check_ts = true})
-local ts_conds = require('nvim-autopairs.ts-conds')
-require('mkdnflow').setup({create_dirs = true})
+local ts_conds = require("nvim-autopairs.ts-conds")
+require("mkdnflow").setup({create_dirs = true})
+require("FTerm").setup({
+    dimensions = {height = 0.6, width = 0.6}
+})
 
 require("bindings")
 require("lsp")
@@ -60,49 +64,51 @@ g.diagnostic_enable_virtual_text = 0
 g.diagnostic_enable_underline = 0
 g.diagnostic_timer_cycle = 200
 
+g.nord_borders = true
+g.nord_cursorline_transparent = true
 g.colors_name = "nord"
 g.mkdp_auto_close = 0
-g.mkdp_browser = 'brave'
+g.mkdp_browser = "brave"
 g.latex_to_unicode_auto = 1
 
-
-opt.completeopt = {"menuone", "noinsert", "noselect"}
-cmd "syntax on"
 cmd "filetype plugin indent on"
-opt.timeoutlen = 500
+cmd "syntax on"
 opt.autoindent = true
 opt.autoread = true
 opt.backspace = {"indent", "eol", "start"}
 opt.bs = "2"
+opt.completeopt = {"menuone", "noinsert", "noselect"}
+opt.cursorline = true
 opt.display = "lastline"
-opt.hlsearch = true
-opt.incsearch = true
-opt.mouse = "a"
-opt.smarttab = true
-opt.softtabstop = 4
-opt.showcmd = true
-opt.showmode = true
-opt.showmatch = true
-opt.report = 0
-opt.linespace = 5
-opt.pumheight = 20
-opt.number = true
 opt.expandtab = true
 opt.hidden = true
+opt.hlsearch = true
 opt.ignorecase = true
+opt.incsearch = true
 opt.joinspaces = false
+opt.linespace = 5
 opt.list = true
+opt.mouse = "a"
 opt.number = true
+opt.number = true
+opt.pumheight = 20
+opt.report = 0
 opt.scrolloff = 4
 opt.shiftround = true
 opt.shiftwidth = 4
+opt.showcmd = true
+opt.showmatch = true
+opt.showmode = true
 opt.sidescrolloff = 8
 opt.smartcase = true
 opt.smartindent = true
-opt.splitright = true
+opt.smarttab = true
+opt.softtabstop = 4
 opt.splitbelow = true
+opt.splitright = true
 opt.tabstop = 4
 opt.termguicolors = true
+opt.timeoutlen = 500
 opt.wildmode = {"list", "longest"}
 opt.wrap = false
 

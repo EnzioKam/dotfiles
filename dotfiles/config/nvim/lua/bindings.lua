@@ -22,6 +22,8 @@ map("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>",
     {noremap = true, silent = true})
 map("n", "<leader>s", "<cmd>lua vim.lsp.buf.document_symbol()<CR>",
     {noremap = true, silent = true})
+map('n', "<leader>t", "<cmd>lua require(\"FTerm\").toggle()<CR>")
+map('t', "<leader>t", "<C-\\><C-n><cmd>lua require(\"FTerm\").toggle()<CR>")
 
 local function t(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
@@ -63,8 +65,6 @@ map("n", "L", "$", {noremap = true})
 map("n", "U", "<C-r>", {noremap = true})
 -- Yank to end of line
 map("n", "Y", "y$", {noremap = true})
--- Open shell in nvim
-map('n', "<leader>t", ":terminal<CR>")
 
 -- Buffers
 map("n", "<leader>bp", ":bprevious<CR>", {noremap = true})
@@ -73,8 +73,6 @@ map("n", "<leader>bf", ":bfirst<CR>", {noremap = true})
 map("n", "<leader>bl", ":blast<CR>", {noremap = true})
 map("n", "<leader>bd", ":bd<CR>", {noremap = true})
 map("n", "<leader>bk", ":bw<CR>", {noremap = true})
--- File save
-map("n", "<leader>fs", ":update<CR>", {noremap = true})
 -- Moving and navigating windows
 map("n", "<leader>ww", "<C-W>w", {noremap = true})
 map("n", "<leader>wr", "<C-W>r", {noremap = true})
