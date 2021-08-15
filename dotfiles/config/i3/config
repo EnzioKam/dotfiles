@@ -15,7 +15,7 @@ bindsym $super+d exec rofi -show drun
 bindsym $alt+Tab exec rofi -show window
 bindsym Print exec $HOME/bin/scrotselect
 bindsym $super+Print exec $HOME/bin/scrotselect -s
-bindsym $super+l exec betterlockscreen -l
+bindsym $super+l exec betterlockscreen --lock blur
 bindsym $super+Shift+l exec betterlockscreen -s
 bindsym $super+b exec brave
 bindsym $super+Shift+w exec firefox
@@ -99,7 +99,7 @@ bindsym $super+Shift+q exec rofi -show power-menu -modi \
     "power-menu:~/scripts/rofi-power-menu/rofi-power-menu --choices=logout/reboot/shutdown"
 
 # Window rules (find class with xprop)
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 0
 assign [class=firefox] 2
 assign [class=Thunar|File-roller|code-oss] 3
 assign [class=qpdfview|Com.github.xournalpp.xournalpp|DesktopEditors] 4

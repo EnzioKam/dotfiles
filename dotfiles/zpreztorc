@@ -39,8 +39,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'syntax-highlighting' \
-  'autosuggestions' \
-  'prompt'
+  'autosuggestions'
 
 #
 # Autosuggestions
@@ -174,7 +173,6 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'brackets' \
   'pattern' \
   'line' \
-  'cursor' \
   'root'
 #
 # Set syntax highlighting styles.
