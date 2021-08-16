@@ -11,6 +11,6 @@ configuration {
     color-normal: "#2E3440, #D8DEE9, #2E3440, #2E3440, #BF616A";
     color-urgent: "#2E3440, #EBCB8B, #2E3440, #2E3440, #EBCB8B";
     color-active: "#2E3440, #D08770, #2E3440, #2E3440, #D08770";
-    color-window: "#2E3440, #E5E9F0, #2E3440";
+    color-window: "#2E3440, #2E3440, #2E3440";
 }
 
