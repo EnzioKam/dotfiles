@@ -73,6 +73,9 @@ dotfiles:
   f_zpreztorc:
     src: zpreztorc
     dst: ~/.zpreztorc
+  f_mytheme.rasi:
+    src: config/rofi/mytheme.rasi
+    dst: ~/.config/rofi/mytheme.rasi
 profiles:
   enzio-p6567rsrp:
     dotfiles:
@@ -98,3 +101,4 @@ profiles:
     - d_alacritty
     - f_zshrc
     - f_zpreztorc
+    - f_mytheme.rasi
