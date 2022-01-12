@@ -44,6 +44,7 @@ require("nvim_comment").setup({
     line_mapping = ";;",
     operator_mapping = ";"
 })
+require("nvim-tree").setup()
 require("lualine").setup({
     options = {theme = "nord"}
 })
