@@ -73,6 +73,7 @@ g.latex_to_unicode_auto = 1
 
 cmd "filetype plugin indent on"
 cmd "syntax on"
+cmd "colorscheme nord"
 opt.autoindent = true
 opt.autoread = true
 opt.backspace = {"indent", "eol", "start"}
