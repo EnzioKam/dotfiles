@@ -11,6 +11,7 @@ require "paq" {
     "lukas-reineke/indent-blankline.nvim";
     "dstein64/nvim-scrollview";
     "shaunsingh/nord.nvim";
+    "rmehri01/onenord.nvim";
     "nvim-treesitter/nvim-treesitter";
     "p00f/nvim-ts-rainbow";
     "terrortylor/nvim-comment";
@@ -46,7 +47,7 @@ require("nvim_comment").setup({
 })
 require("nvim-tree").setup()
 require("lualine").setup({
-    options = {theme = "nord"}
+    options = {theme = "onenord"}
 })
 require("lspfuzzy").setup({})
 local npairs = require("nvim-autopairs")
@@ -67,14 +68,14 @@ g.diagnostic_timer_cycle = 200
 
 g.nord_borders = true
 g.nord_cursorline_transparent = true
-g.colors_name = "nord"
+g.colors_name = "onenord"
 g.mkdp_auto_close = 0
 g.mkdp_browser = "brave"
 g.latex_to_unicode_auto = 1
 
 cmd "filetype plugin indent on"
 cmd "syntax on"
-cmd "colorscheme nord"
+cmd "colorscheme onenord"
 opt.autoindent = true
 opt.autoread = true
 opt.backspace = {"indent", "eol", "start"}
