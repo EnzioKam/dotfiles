@@ -10,7 +10,6 @@ require "paq" {
     "lewis6991/gitsigns.nvim";
     "lukas-reineke/indent-blankline.nvim";
     "dstein64/nvim-scrollview";
-    "shaunsingh/nord.nvim";
     "rmehri01/onenord.nvim";
     "nvim-treesitter/nvim-treesitter";
     "p00f/nvim-ts-rainbow";
@@ -30,6 +29,7 @@ require "paq" {
     "numToStr/FTerm.nvim";
 }
 
+require("onenord").setup()
 require("gitsigns").setup()
 require("indent_blankline").setup {
     char = "|",
@@ -66,29 +66,16 @@ g.diagnostic_enable_virtual_text = 0
 g.diagnostic_enable_underline = 0
 g.diagnostic_timer_cycle = 200
 
-g.nord_borders = true
-g.nord_cursorline_transparent = true
-g.colors_name = "onenord"
 g.mkdp_auto_close = 0
 g.mkdp_browser = "brave"
 g.latex_to_unicode_auto = 1
 
-cmd "filetype plugin indent on"
-cmd "syntax on"
-cmd "colorscheme onenord"
-opt.autoindent = true
-opt.autoread = true
-opt.backspace = {"indent", "eol", "start"}
 opt.bs = "2"
 opt.completeopt = {"menuone", "noinsert", "noselect"}
 opt.cursorline = true
 opt.display = "lastline"
 opt.expandtab = true
-opt.hidden = true
-opt.hlsearch = true
 opt.ignorecase = true
-opt.incsearch = true
-opt.joinspaces = false
 opt.linespace = 5
 opt.list = true
 opt.mouse = "a"
@@ -99,13 +86,11 @@ opt.report = 0
 opt.scrolloff = 4
 opt.shiftround = true
 opt.shiftwidth = 4
-opt.showcmd = true
 opt.showmatch = true
 opt.showmode = true
 opt.sidescrolloff = 8
 opt.smartcase = true
 opt.smartindent = true
-opt.smarttab = true
 opt.softtabstop = 4
 opt.splitbelow = true
 opt.splitright = true
