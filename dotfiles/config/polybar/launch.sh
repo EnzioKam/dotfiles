@@ -13,7 +13,7 @@ lines=$(polybar --list-monitors | cut -d ":" -f1 | wc -l)
 
 if [[ $lines == 2 ]]; then
     for m in $outputs; do
-        if [[ $m == "HDMI-1-1" ]]; then
+        if [[ $m == "HDMI-1-0" ]]; then
             polybar -c ~/.config/polybar/config-pri.ini primary &
         elif [[ $m == "eDP1" ]]; then
             polybar -c ~/.config/polybar/config-sec.ini secondary &
