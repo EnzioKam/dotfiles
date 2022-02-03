@@ -17,7 +17,7 @@ bindsym Print exec $HOME/bin/scrotselect
 bindsym $super+Print exec $HOME/bin/scrotselect -s
 bindsym $super+l exec betterlockscreen --lock blur
 bindsym $super+Shift+l exec betterlockscreen -s
-bindsym $super+b exec brave
+bindsym $super+b exec chromium
 bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec thunar
 bindsym $super+Shift+c exec code
@@ -107,7 +107,7 @@ assign [class=Telegram] 5
 assign [class=Lxappearance|Pavucontrol] 7
 for_window [class=zoom] move to workspace 6
 for_window [class=Gpicview|feh|File-roller|Lxappearance|Pavucontrol|zoom] floating enable
-for_window [class=Alacritty|firefox|Brave|File-roller|Lxappearance|Pavucontrol] focus
+for_window [class=Alacritty|firefox|chromium|File-roller|Lxappearance|Pavucontrol] focus
 
 # Gap options
 smart_gaps inverse_outer
