@@ -36,7 +36,7 @@ require("indent_blankline").setup {
     buftype_exclude = {"terminal"}
 }
 require("nvim-treesitter.configs").setup({
-    ensure_installed = "maintained",
+    ensure_installed = {"julia", "python"},
     highlight = {enable = true},
     rainbow = {enable = true, extended_mode = true},
     autopairs = {enable = true}

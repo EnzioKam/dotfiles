@@ -25,7 +25,6 @@ alias cat='bat --style=plain'
 alias diff='diff --color'
 alias dotdrop='/home/enzio/dotfiles/dotdrop.sh --cfg=/home/enzio/dotfiles/config.yaml'
 alias yaydev='yay -Syu --devel --timeupdate'
-alias updatenus='fluminurs --download-to ~/Documents/fluminurs --updated overwrite'
 
 # https://github.com/romkatv/powerlevel10k/issues/888
 zle-line-init() {
