@@ -63,7 +63,7 @@ colors:
       foreground: '#ebcb8b'
       background: '#4c566a'
 
-    bar:
+    colors.footer_bar:
       background: '#434c5e'
       foreground: '#88c0d0'
 
